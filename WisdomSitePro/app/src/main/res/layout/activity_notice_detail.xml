@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"
+                tools:text="关于发布《产品研发流程管理制度》的通知"/>
+
+            <TextView
+                android:id="@+id/tv_publisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="14sp"
+                tools:text="贵州绿建科技有限公司 2018.6.7"/>
+
+            <TextView
+                android:id="@+id/tv_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="14sp"
+                tools:text="接收人:"/>
+
+            <TextView
+                android:id="@+id/tv_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="14sp"
+                tools:text="已读：20"/>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"
+                tools:text="1．工作时间：公司全体员工实行坐班制度。上班时间为9:00—17:30 ；午餐时间：12:00—13:30。
+2．每日上班、下班实行打卡签到制（以钉钉为准）。迟到、早退在30分钟以内者（本人及以上负责人），各自罚款20元每次。
+3．迟到、早退30分钟以上1小时以内者（本人及以上负责人），各自罚款50元每次。
+迟到、早退1小时以上，算事假1天。迟到1小时以上且未与任何考勤负责人打招呼者算旷工1天（以钉钉为准），旷工1天扣发双倍日工资。"/>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_attachment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="附件："
+                android:textColor="@color/color_grey_666666"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.application.LaborPersonDetailActivity">
+
+    <include layout="@layout/layout_title_white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="居民身份证信息"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_id_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="姓名"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="性别"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_nation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="民族"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="出生日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="住址"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="身份证号码"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_org"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="签发机关"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="有效期限"
+                    app:item_title_size="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_work_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="工卡信息"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_work_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="联系电话"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="班组"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_in_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="进场日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_out_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="离场日期"
+                    app:item_title_size="14sp" />
+
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="工号"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_social_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="社保人"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_emergency_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="紧急联系人"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_emergency_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="紧急联系人电话"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_sub_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_sub_unit_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位负责人"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_sub_unit_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位负责人电话"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_work_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="工种结算方式"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_is_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="立即上传至政府监管机构"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_is_poor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="是否是精准扶贫"
+                    app:item_title_size="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_credit_history"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="信用记录"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_credit_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_credit_history_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_common_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="50dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="序号"
+                            android:textColor="@color/color_grey_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_credit_history_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_blue_round"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:visibility="gone"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_credit_history_arrow_down"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        style="@style/comDivider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="姓名"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="行为类别"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="行为描述"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="所在项目"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_sub_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_prize_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="奖惩单位"
+                    app:item_title_size="14sp" />
+
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="奖惩日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_credit_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="备注"
+                    app:item_title_size="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_skill_history"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="技能记录"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_skill_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_common_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="50dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="序号"
+                            android:textColor="@color/color_grey_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_skill_history_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_blue_round"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:visibility="gone"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_skill_history_arrow_down"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/comDivider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_skill_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="技能名称"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_skill_org"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="发证机构"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_skill_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="发证日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_skill_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="备注"
+                    app:item_title_size="14sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_labour_contract"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="劳务合同"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_labour_contract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_common_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="50dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="序号"
+                            android:textColor="@color/color_grey_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_labour_contract_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_blue_round"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:visibility="gone"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_labour_contract_arrow_down"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/comDivider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="姓名"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="身份证号码"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_construction_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="施工单位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_sub_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="签订日期"
+                    app:item_title_size="14sp" />
+
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="合同生效日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_contract_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="合同终止日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="合同薪资"
+                    app:item_title_size="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_work_injury_history"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="工伤记录"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_injury_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_common_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="50dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="序号"
+                            android:textColor="@color/color_grey_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_injury_history_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_blue_round"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:visibility="gone"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_injury_history_arrow_down"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/comDivider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="事故发生时间"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="事故发生地"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="事故类别"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="事故原因"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_die_situation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="伤亡情况"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_work_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="工种级别"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="工种年龄"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_injury_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="教育程度"
+                    app:item_title_size="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_work_experience"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="工作经验"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_work_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_common_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="50dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="序号"
+                            android:textColor="@color/color_grey_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_work_experience_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/bg_blue_round"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:visibility="gone"
+                            android:textColor="@color/color_white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_work_experience_arrow_down"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_arrow_down" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/comDivider"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_experience_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="所在项目"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_experience_sub_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="分包单位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_experience_work_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="累计工种时长"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_experience_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="班组"
+                    app:item_title_size="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

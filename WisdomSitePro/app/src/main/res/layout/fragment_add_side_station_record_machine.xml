@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+        android:id="@+id/item_machine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputItemMaxLength="20"
+        app:inputItemTitle="主要机械设备"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+        android:id="@+id/item_machine_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputItemHint="请选择"
+        app:inputItemRightArrow="true"
+        app:inputItemTitle="主要机械设备数量"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="对应机械附件"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="13sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="8dp"/>
+
+</LinearLayout>

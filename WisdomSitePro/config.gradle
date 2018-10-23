@@ -1,0 +1,73 @@
+ext {
+
+    cfg = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "27.0.3",
+            applicationId    : "com.ljkj.qxn.wisdomsitepro",
+            minSdkVersion    : 16,
+            targetSdkVersion : 25,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+
+            storePassword    : "Lj123456",
+            keyAlias         : "WisdomSitePro",
+            keyPassword      : "Lj123456"
+    ]
+
+    supportVersion = '26.0.0-alpha1'
+
+    pro = [
+            "cdsp-android-library": project(':cdsp-android-library'),
+            "photopicker"         : project(':photopicker'),
+    ]
+
+
+    lib = [
+
+            //support
+            "support-multidex"                                 : "com.android.support:multidex:1.0.0",
+            "support-annotations"                              : "com.android.support:support-annotations:$supportVersion",
+            "support-v4"                                       : "com.android.support:support-v4:$supportVersion",
+            "support-design"                                   : "com.android.support:design:$supportVersion",
+            "support-cardview-v7"                              : "com.android.support:cardview-v7:$supportVersion",
+            "appcompat-v7"                                     : "com.android.support:appcompat-v7:$supportVersion",
+            "com.android.support:recyclerview"                 : "com.android.support:recyclerview-v7:$supportVersion",
+
+            //image
+            "glide"                                            : "com.github.bumptech.glide:glide:3.8.0",
+            "com.android.support:exifinterface"                : "com.android.support:exifinterface:25.1.0",
+
+            //http
+            "okhttp3:okhttp"                                   : "com.squareup.okhttp3:okhttp:3.8.1",
+            "okhttp3:logging-interceptor"                      : "com.squareup.okhttp3:logging-interceptor:3.8.1",
+            "com.lzy.net:okgo"                                 : "com.lzy.net:okgo:3.0.4",
+            "com.lzy.net:okserver"                             : "com.lzy.net:okserver:2.0.5",
+
+            //Rxjava RxAndroid
+            "io.reactivex.rxjava2:rxandroid"                   : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "io.reactivex.rxjava2:rxjava"                      : "io.reactivex.rxjava2:rxjava:2.1.3",
+
+            //butterknife
+            'com.jakewharton:butterknife'                      : "com.jakewharton:butterknife:8.8.1",
+
+            //UI
+            'com.flyco.tablayout:FlycoTabLayout_Lib'           : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            'com.pnikosis:materialish-progress'                : "com.pnikosis:materialish-progress:1.7",
+            'com.github.mcxtzhang:SwipeDelMenuLayout'          : "com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5",
+            'com.hyman:flowlayout-lib'                         : "com.hyman:flowlayout-lib:1.1.2",
+            'com.scwang.smartrefresh:SmartRefreshLayout'       : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.4",
+            'com.scwang.smartrefresh:SmartRefreshHeader'       : "com.scwang.smartrefresh:SmartRefreshHeader:1.0.4",//没有使用特殊Header，可以不加这行
+
+            //activitystarter
+            'com.marcinmoskala.activitystarter:activitystarter': "com.marcinmoskala.activitystarter:activitystarter:1.00",
+
+            //eventbus
+            'org.greenrobot:eventbus'                          : "org.greenrobot:eventbus:3.1.1",
+
+            //permissions
+            'com.anthonycr.grant:permissions'                  : "com.anthonycr.grant:permissions:1.0",
+
+            //json
+            'com.alibaba:fastjson'                             : "com.alibaba:fastjson:1.1.62.android",
+    ]
+}

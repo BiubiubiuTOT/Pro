@@ -1,0 +1,10 @@
+<manifest package="cdsp.android"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:supportsRtl="true">
+
+
+    </application>
+
+</manifest>

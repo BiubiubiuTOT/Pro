@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:background="@drawable/selector_common_background_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/iv_img"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_circle_name"
+            android:gravity="center"
+            android:text="名"
+            android:textColor="@color/color_white"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/listFirstTvStyle"
+                android:layout_centerVertical="true"
+                android:text="检查人：姓名"/>
+
+            <TextView
+                android:id="@+id/tv_code"
+                style="@style/listThirdTvStyle"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_name"
+                android:text="检查编号："/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/comDivider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_danger_level"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="隐患等级："/>
+
+        <TextView
+            android:id="@+id/tv_handle_state"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="处理状态："/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_rectify_type"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="整改类型："/>
+
+        <TextView
+            android:id="@+id/tv_check_date"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="检查日期："/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--titlebar高度-->
+    <dimen name="titlebar_height">48dp</dimen>
+
+
+
+</resources>

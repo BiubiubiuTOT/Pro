@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_title_white"></include>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="基础阶段抽查次数"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_base_step_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="主体施工阶段抽查次数"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_main_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="装饰阶段抽查次数"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_descri_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                style="@style/lightBlueTvItemStyle"
+                android:text="进度计划实施记录" />
+
+            <TextView
+                android:id="@+id/tv_progress_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_frame_grey_e5e5e5"
+                android:padding="12dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/lightBlueTvItemStyle"
+                android:layout_marginTop="10dp"
+                android:text="工程其他要求" />
+
+            <TextView
+                android:id="@+id/tv_suggestion_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_frame_grey_e5e5e5"
+                android:padding="12dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/lightBlueTvItemStyle"
+                android:layout_marginTop="10dp"
+                android:text="整改附件"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_files"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

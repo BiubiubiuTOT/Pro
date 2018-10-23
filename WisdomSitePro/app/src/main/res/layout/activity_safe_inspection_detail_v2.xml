@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title_white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_next"
+        android:layout_below="@+id/layout_title"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_check_result"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="检查结果"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_check_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="安检编号"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查部位"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="整改班组"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="按事故发生原因分类"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_loss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="按人员伤亡及经济损失分类"
+                    app:item_title_size="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="巡检发生的问题"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_rectify_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="照片"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_rectify_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_post_man"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="发文人"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_group_leader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="班组负责人"
+                    app:item_title_size="14sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_reform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_examine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_examine"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_main"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="审核"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_whether_qualified"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_title="是否合格"
+                    app:item_title_size="14sp" />
+
+                <EditText
+                    android:id="@+id/et_qualified"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_frame_grey_rectify"
+                    android:gravity="left"
+                    android:hint="请输入不合格原因"
+                    android:maxLength="500"
+                    android:minHeight="160dp"
+                    android:padding="10dp"
+                    android:textColor="@color/color_grey_333333"
+                    android:textColorHint="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_rectify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_rectify"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_main"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="整改回复"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_date2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content="2018-1-1"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查日期"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_group_leader2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="班组负责人"
+                    app:item_title_size="14sp" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_post_man2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="发文人"
+                    app:item_title_size="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="整改回复"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_rectify_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_frame_grey_rectify"
+                    android:gravity="left"
+                    android:hint="请输入5~500字描述..."
+                    android:maxLength="500"
+                    android:minHeight="160dp"
+                    android:padding="10dp"
+                    android:textColor="@color/color_grey_333333"
+                    android:textColorHint="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="添加照片"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_scene_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_common_background_orange"
+        android:gravity="center"
+        android:text="按钮"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

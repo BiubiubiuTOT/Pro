@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="14dp"
+        android:text="最近24小时环境数据统计（2018-8-23）"
+        android:textColor="#74789C"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_pm10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_pm_normal"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="PM10"
+        android:textColor="#74789C"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:id="@+id/tv_pm5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/tv_pm10"
+        android:background="@drawable/shape_pm_selected"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="PM2.5"
+        android:textColor="#74789C"
+        android:textSize="11sp"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_pm5"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>

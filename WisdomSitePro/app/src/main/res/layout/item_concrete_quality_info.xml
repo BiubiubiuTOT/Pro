@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:background="@color/color_white"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/listFirstTvStyle"
+            android:text="样品名称：混凝土"/>
+
+        <TextView
+            android:id="@+id/tv_meet_requirement"
+            style="@style/listSeTvStyle"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/ic_concrete_quality_check"
+            android:drawablePadding="4dp"
+            android:text="符合设计要求"
+            android:textColor="@color/color_green"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_date_left"
+            style="@style/listThirdTvStyle"
+            android:layout_weight="1"
+            android:text="检验时间："/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_date_right"
+            style="@style/listThirdTvStyle"
+            android:layout_weight="1"
+            tools:text="结束时间："/>
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/comDivider"
+        android:layout_marginTop="6dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_use_part"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="使用部位：底部"/>
+
+        <TextView
+            android:id="@+id/tv_maintenance_mode"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="养护方式：标准养护"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tv_check_number"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="检验编号：123456"/>
+
+        <TextView
+            android:id="@+id/tv_impervious_level"
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="设计抗渗等级：3级"/>
+
+    </LinearLayout>
+
+</LinearLayout>

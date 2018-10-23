@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_check_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="检验编号"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_entrustment_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="委托单位"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_witness_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="见证单位"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_witness_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="见证人"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_use_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="使用部位"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_sample_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="样品名称"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_strength_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="设计强度等级"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_Impermeability_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="设计抗渗等级"/>
+
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_maintenance_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="养护方式"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="龄期（d）"
+                app:inputItemType="number"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_forming_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="成型日期"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_check_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="检验日期"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_check_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="检验结果"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_check_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="检验单位	"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_appearance_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="外观质量"/>
+
+            <LinearLayout
+                style="@style/PersonalItemStyle">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_weight="1"
+                    android:text="请上传验收附件"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_upload"
+                    style="@style/listFirstTvStyle"
+                    android:background="@drawable/bg_frame_upload"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:paddingTop="3dp"
+                    android:text="选择"
+                    android:textColor="@color/color_white"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_simple_recycleview_list"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_common_background_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"/>
+
+</LinearLayout>

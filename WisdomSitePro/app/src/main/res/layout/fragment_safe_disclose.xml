@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/line">
+
+        <RadioButton
+            android:id="@+id/rb_report"
+            style="@style/SelectRadioStyle"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:text="是否上报监督机构"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0.5dp"
+        android:layout_height="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#999999"/>
+
+    <RadioButton
+        android:id="@+id/rb_date"
+        style="@style/SelectRadioStyle"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/line"
+        android:drawableRight="@mipmap/ic_select_down_grey"
+        android:text="交底日期"
+        android:textColor="@color/color_grey_333333"/>
+
+    <include
+        layout="@layout/layout_recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rb_date"/>
+
+</RelativeLayout>

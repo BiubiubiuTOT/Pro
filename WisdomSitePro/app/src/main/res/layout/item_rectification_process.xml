@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:background="@color/color_white">
+
+
+    <ImageView
+        android:id="@+id/img_clock"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_clock" />
+
+    <View
+        android:id="@+id/v_d"
+        style="@style/comDivider"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/img_clock"
+        android:layout_below="@id/img_clock"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/img_clock"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="胡宇（项目经理）"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_descri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/img_clock"
+        android:text="下发整改通知 2018-01-09"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    tools:context=".ui.contacts.ProjectQRActivity">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_circle_name"
+        android:textSize="16sp"
+        android:text="花"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/color_white"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="花果园二期项目"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/color_grey_333333"/>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/code"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用智慧工地扫码"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="14sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快速加入项目"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="14sp"/>
+</LinearLayout>

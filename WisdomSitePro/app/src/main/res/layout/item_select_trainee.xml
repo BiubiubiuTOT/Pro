@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_circle_unselected"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingRight="20dp"
+            android:textSize="14sp"
+            tools:text="钢筋班"/>
+
+        <TextView
+            android:id="@+id/tv_subordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/ic_subordinate"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:text="下级"
+            android:textSize="14sp"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_grey_e5e5e5"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_grey_e5e5e5"/>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/PersonalItemStyle">
+
+        <TextView
+            android:id="@+id/tv_building_name"
+            style="@style/PersonalItemTextStyle"
+            android:text="第一栋" />
+
+        <TextView
+            android:id="@+id/tv_building_num"
+            style="@style/PersonalItemTextStyle"
+            android:layout_width="match_parent"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right"
+            android:text="" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/comDivider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+</LinearLayout>

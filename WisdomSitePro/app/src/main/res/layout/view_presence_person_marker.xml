@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#282A34"
+              android:orientation="vertical"
+              android:padding="4dp">
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        tools:text="时刻：12点"/>
+
+    <TextView
+        android:id="@+id/tv_persons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#30E3A9"
+        android:textSize="12sp"
+        tools:text="人数：142人"/>
+
+</LinearLayout>

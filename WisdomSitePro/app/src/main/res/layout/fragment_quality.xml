@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_title_blue"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_quality_fragment_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_quality_log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_quality_check"/>
+
+        <ImageView
+            android:id="@+id/item_quality_patrol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_quality_patrol"/>
+
+    </LinearLayout>
+
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_quality_statistics"
+        app:item_title="质量统计"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_concrete_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_quality_concrete_info"
+        app:item_title="砼质量信息"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_hidden_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_quality_hidden_account"
+        app:item_title="质量隐患台账"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_quality_system"
+        app:item_title="质量体系"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:item_icon="@mipmap/ic_quality_accept"
+        app:item_title="质量验收"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_quality_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_bottom_line="false"
+        app:item_icon="@mipmap/ic_quality_log"
+        app:item_title="质量检查"/>
+</LinearLayout>
+
+

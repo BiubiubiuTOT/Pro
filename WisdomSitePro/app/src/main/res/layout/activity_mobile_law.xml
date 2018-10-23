@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_common_background_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="移动执法设备（11866）"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_common_background_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="移动执法设备（80006527）"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="16sp"/>
+
+</LinearLayout>

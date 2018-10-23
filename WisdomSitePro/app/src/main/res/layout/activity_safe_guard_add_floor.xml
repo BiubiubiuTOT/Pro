@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title_white"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+        android:id="@+id/item_under_floor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_layout"
+        app:inputItemHint="请选择"
+        app:inputItemRightArrow="true"
+        app:inputItemTitle="请选择建立地下室层数"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+        android:id="@+id/item_floors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_under_floor"
+        app:inputItemHint="请选择"
+        app:inputItemRightArrow="true"
+        app:inputItemTitle="请选择建立楼层数量"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+        android:id="@+id/item_split_floor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_floors"
+        app:inputItemHint="请选择"
+        app:inputItemRightArrow="true"
+        app:inputItemTitle="是否新建架空层"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_refuge_floors"
+        style="@style/PersonalItemStyle"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/PersonalItemTextStyle"
+            android:text="新增避难层数量"/>
+
+        <TextView
+            android:id="@+id/tv_refuge_floors"
+            style="@style/PersonalItemTextStyle"
+            android:layout_width="match_parent"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right"
+            android:hint="请选择"
+            android:textColor="@color/color_grey_cccccc"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_set_refuge_floor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_refuge_floors"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/lightBlueTvItemStyle"
+            android:gravity="center"
+            android:text="设置避难层高度"/>
+
+        <include layout="@layout/layout_simple_recycleview_list"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_submit_add_floor"
+        style="@style/ButtonRectangleStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="提交"/>
+
+</RelativeLayout>

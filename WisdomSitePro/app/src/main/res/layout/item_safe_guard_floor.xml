@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout android:id="@+id/content_container" style="@style/PersonalItemStyle">
+
+        <TextView
+            android:id="@+id/tv_building_name"
+            style="@style/PersonalItemTextStyle"
+            android:text="第一栋" />
+
+        <TextView
+            android:id="@+id/tv_building_num"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            style="@style/PersonalItemTextStyle"
+            android:layout_width="match_parent"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right"
+            android:text="" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/comDivider" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_red"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

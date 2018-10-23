@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#282A34"
+              android:id="@+id/container"
+              android:orientation="vertical"
+              android:padding="4dp">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        tools:text="班组：木工班"/>
+
+    <TextView
+        android:id="@+id/tv_team_persons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="班组人数：142人"/>
+
+    <TextView
+        android:id="@+id/tv_presence_persons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#34C8FF"
+        android:textSize="12sp"
+        tools:text="现场人数：356人"/>
+
+</LinearLayout>

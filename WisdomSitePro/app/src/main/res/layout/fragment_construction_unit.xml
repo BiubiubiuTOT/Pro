@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_unit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="单位名称"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="地址"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="资质等级"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_certificate_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="资质证书号"
+                app:item_title_size="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_grey_e5e5e5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="法人代表"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_legal_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="姓名"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_legal_person_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="联系电话"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_legal_person_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="身份证号码"
+                app:item_title_size="14sp" />
+
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_org_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="企业组织机构代码"
+                app:item_title_size="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_grey_e5e5e5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="技术负责人"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_skill_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="姓名"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_skill_manager_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="联系电话"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_skill_manager_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="身份证号码"
+                app:item_title_size="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_grey_e5e5e5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="项目负责人"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="姓名"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_manager_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="联系电话"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_manager_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="身份证号码"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_build_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="建造师等级"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="资质证书号"
+                app:item_title_size="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_grey_e5e5e5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="项目部技术负责人"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_skill_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="姓名"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_skill_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="专业技术职称"
+                app:item_title_size="14sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_proj_skill_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content_size="14sp"
+                app:item_right_arrow="false"
+                app:item_title="资质证书号"
+                app:item_title_size="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_grey_e5e5e5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="质检员"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

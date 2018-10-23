@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="工程名称"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_project_name"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="项目负责人"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_project_header"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="编号"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="日期"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="天气情况"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_weather"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="风力等级"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_wind_level"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+                <View
+                    style="@style/comDivider"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                style="@style/PersonalItemStyle"
+                android:layout_height="40dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_centerVertical="true"
+                    android:text="是否有突发情况"
+                    android:textColor="@color/color_grey_939699"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_show_emergency"
+                    style="@style/listFirstTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey_626466"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_emergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_emergency_detail_text"
+                    style="@style/lightBlueTvItemStyle"
+                    android:drawableRight="@mipmap/ic_group_down_grey"
+                    android:paddingRight="18dp"
+                    android:text="突发事件详情"/>
+
+
+                <TextView
+                    android:id="@+id/tv_emergency_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:text="施工场地四周道路畅通，地面应当硬化，排水、排污设施有效，无积水现象，温暖季节有绿化配置。"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_production_text"
+                style="@style/lightBlueTvItemStyle"
+                android:drawableRight="@mipmap/ic_group_down_grey"
+                android:paddingRight="18dp"
+                android:text="生产记录情况"/>
+
+            <TextView
+                android:id="@+id/tv_production_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="施工场地四周道路畅通，地面应当硬化，排水、排污设施有效，无积水现象，温暖季节有绿化配置。"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_quality_text"
+                style="@style/lightBlueTvItemStyle"
+                android:drawableRight="@mipmap/ic_group_down_grey"
+                android:paddingRight="18dp"
+                android:text="质量记录安全工作记录"/>
+
+            <TextView
+                android:id="@+id/tv_quality_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="施工场地四周道路畅通，地面应当硬化，排水、排污设施有效，无积水现象，温暖季节有绿化配置。"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <include layout="@layout/layout_simple_recycleview_list"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="13dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="*注：本表由施工单位填写，建设单位、施工单位、城建档案馆各保存一份。"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

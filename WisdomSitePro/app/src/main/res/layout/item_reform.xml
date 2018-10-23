@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_white"
+              android:orientation="vertical"
+              android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_main"
+        android:drawableRight="@mipmap/ic_collapse"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="班组整改回复一"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+            android:id="@+id/item_check_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_content="2018-1-31"
+            app:item_content_size="14sp"
+            app:item_right_arrow="false"
+            app:item_title="检查日期"
+            app:item_title_size="14sp"/>
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+            android:id="@+id/item_group_leader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_content="小白2"
+            app:item_content_size="14sp"
+            app:item_right_arrow="false"
+            app:item_title="班组负责人"
+            app:item_title_size="14sp"/>
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+            android:id="@+id/item_post_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:item_content="小白"
+            app:item_content_size="14sp"
+            app:item_right_arrow="false"
+            app:item_title="发文人"
+            app:item_title_size="14sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_grey_e5e5e5"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="整改回复"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_rectify_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="整改内容：施工场地施工场地施工场地施工场地施工场地施工场地施工场地施工场地施工场地施工场地施工场地"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_grey_e5e5e5"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="照片"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_rectify_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_result"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="整改结果"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_rectify_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_rectangle_orange_20dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:text="不合格"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_frame_grey_rectify"
+            android:padding="12dp"
+            android:text="不合格原因:"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

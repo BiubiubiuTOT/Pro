@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_bg"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_white"/>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/title"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dp_10">
+
+        <cdsp.android.ui.widget.ClearEditTextView
+            android:id="@+id/edit_search"
+            style="@style/EditSearchStyle"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/color_white"
+            android:hint="请输入记录人" />
+
+        <RadioButton
+            android:id="@+id/rb_start"
+            style="@style/SelectRadioStyle"
+            android:text="记录日期" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_search"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:src="@mipmap/ic_message_add_white"
+        app:backgroundTint="@color/color_main"
+        app:fabSize="auto"/>
+
+</RelativeLayout>

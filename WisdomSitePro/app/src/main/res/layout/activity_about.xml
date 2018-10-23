@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_about_logo"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_about_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:text="        建筑智慧工地APP通过将物联网、云计算、大数据、移动互联网等新兴技术整合应用，将建筑施工现场的实际状态，经采集和汇集处理，以可视化的形式在统一的数据共享平台进行实时展现，为建设项目相关的各参与单位、项目部、管理人员、班组及监管部门，提供建设项目的进度、劳务、安全、质量、环境与能耗等关键管理环节相关信息数据，为参与单位及人员搭建提供项目管理各业务板块实时感知、决策及沟通一体化智慧项目管理工作平台。"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="15sp"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:item_content="longmajishu"
+                app:item_right_arrow="false"
+                app:item_title="官方微信"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content="www.ryoma.net.cn"
+                app:item_right_arrow="false"
+                app:item_title="官方网站"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content="0851-84111151"
+                app:item_right_arrow="false"
+                app:item_title="联系电话"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_content="贵州省贵阳市观山湖区诚信南路麒龙CBD-B1座-21楼"
+                app:item_content_size="12sp"
+                app:item_right_arrow="false"
+                app:item_bottom_line="false"
+                app:item_title="公司地址"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:src="@mipmap/ic_about_bottom"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

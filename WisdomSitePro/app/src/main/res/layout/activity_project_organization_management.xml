@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.contacts.ProjectOrganizationManagementActivity">
+
+    <include layout="@layout/layout_title_white" />
+
+    <RelativeLayout
+        android:id="@+id/item_QR_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circle_name"
+            android:gravity="center"
+            android:text="项"
+            android:textColor="@color/color_bg"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/tv_one"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_project_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="项目管理移动信息化"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_project_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="5dp"
+                android:text="项目编号："
+                android:textColor="@color/color_grey_999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/qr_code"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_project_overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:item_content_size="12sp"
+        app:item_icon="@mipmap/edit_project_overview"
+        app:item_title="编辑项目概况" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_add_departments_and_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_content_size="12sp"
+        app:item_bottom_line="false"
+        app:item_icon="@mipmap/add_member"
+        app:item_title="部门和成员" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_project_set_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:item_content_size="12sp"
+        app:item_icon="@mipmap/add_member"
+        app:item_right_arrow="false"
+        app:item_title="设置组织管理员" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_project_apply_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:item_content_size="12sp"
+        app:item_icon="@mipmap/ic_quality_check"
+        app:item_right_arrow="false"
+        app:item_title="项目成员申请" />
+
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_project_cloud_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:item_content_size="12sp"
+        app:item_icon="@mipmap/project_cloud_space"
+        app:item_right_arrow="false"
+        app:item_title="项目云空间" />
+
+    <TextView
+        android:id="@+id/tv_contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="10dp"
+        android:text="*如需转移该项目，请联系软件供应商\n电话：0851-86869595"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="10sp" />
+
+</LinearLayout>

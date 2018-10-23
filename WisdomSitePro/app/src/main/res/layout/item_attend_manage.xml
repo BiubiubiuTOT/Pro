@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/selector_common_background_white"
+              android:orientation="vertical"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp">
+
+    <RelativeLayout style="@style/listFirstItemStyle">
+
+        <TextView
+            android:id="@+id/img_avatar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_circle_name"
+            android:gravity="center"
+            android:text="名"
+            android:textColor="@color/color_white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/listFirstTvStyle"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_avatar"
+            android:drawablePadding="6dp"
+            android:text="胡宇"
+            android:textSize="22sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_detail"
+            style="@style/listFirstTvStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="6dp"
+            android:drawableRight="@mipmap/ic_black_arrow_right"
+            android:text="详情"/>
+
+        <TextView
+            android:id="@+id/tv_work_type"
+            style="@style/listFirstTvStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62dp"
+            android:layout_toLeftOf="@id/tv_detail"
+            android:text="班组：钢筋工"/>
+    </RelativeLayout>
+
+    <View style="@style/comDivider"/>
+
+    <LinearLayout
+        style="@style/listSeItemStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_place"
+            style="@style/listSeTvStyle"
+            android:text="考勤地点：高新区管委会"/>
+    </LinearLayout>
+
+    <View style="@style/comDivider"/>
+
+
+    <LinearLayout
+        style="@style/listSeItemStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/listSeTvStyle"
+            android:layout_width="160dp"
+            android:text="考勤日期：2018-01-18"/>
+
+        <TextView
+            android:id="@+id/tv_total_hours"
+            style="@style/listSeTvStyle"
+            android:layout_width="wrap_content"
+            android:text="累计工时：157小时"
+            android:textColor="@color/color_main"/>
+    </LinearLayout>
+
+    <View style="@style/comDivider"/>
+
+    <LinearLayout
+        style="@style/listSeItemStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_work_in_time"
+            style="@style/listSeTvStyle"
+            android:layout_width="160dp"
+            android:text="上班打卡：11:08"
+            android:textColor="@color/color_main"/>
+
+        <TextView
+            android:id="@+id/tv_work_out_time"
+            style="@style/listSeTvStyle"
+            android:layout_width="wrap_content"
+            android:text="下班打卡：15:54"
+            android:textColor="@color/color_main"/>
+    </LinearLayout>
+</LinearLayout>

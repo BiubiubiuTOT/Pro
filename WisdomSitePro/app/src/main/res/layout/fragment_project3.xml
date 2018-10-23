@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/black"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/project_fragment_status_bar_color"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="18sp"
+        tools:text="兴义国际生态城3组团"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableFooterTranslationContent="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/project_fragment_status_bar_color"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="16dp">
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.HorizontalProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        app:hpb_animate="true"
+                        app:hpb_duration="1000"
+                        app:hpb_progress="0"
+                        app:hpb_text_size="13sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_start_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="开工：2018-8-22"
+                            android:textColor="#579AF9"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_remain_days"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="剩余345天"
+                            android:textColor="@color/color_white"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_finish_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:text="竣工：2022-2-2"
+                            android:textColor="#74789C"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/web_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:visibility="gone"/>
+
+                <com.ljkj.qxn.wisdomsitepro.ui.project.view.CornerRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@color/project_fragment_status_bar_color"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nine_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/project_fragment_status_bar_color"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@mipmap/ic_nine_brand"
+                        android:gravity="center"
+                        android:paddingBottom="14dp"
+                        android:paddingTop="14dp"
+                        android:text="九牌一图"
+                        android:textColor="#74789C"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_project_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/project_fragment_status_bar_color"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@mipmap/ic_project_progress"
+                        android:gravity="center"
+                        android:paddingBottom="14dp"
+                        android:paddingTop="14dp"
+                        android:text="工程形象进度展示"
+                        android:textColor="#74789C"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_video_monitor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/project_fragment_status_bar_color"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@mipmap/ic_video_monitor"
+                        android:gravity="center"
+                        android:paddingBottom="14dp"
+                        android:paddingTop="14dp"
+                        android:text="实时视频监控"
+                        android:textColor="#74789C"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_barometer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/project_fragment_status_bar_color"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@mipmap/ic_barometer"
+                        android:gravity="center"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="16dp"
+                        android:text="晴雨表"
+                        android:textColor="#74789C"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:overScrollMode="never"
+                    app:tabBackground="@drawable/selector_tab_project"
+                    app:tabGravity="fill"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/color_white"
+                    app:tabTextColor="#2282EF"/>
+
+                <com.ljkj.qxn.wisdomsitepro.ui.project.view.CornerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="6dp">
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.NoScrollViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/project_fragment_status_bar_color"/>
+
+                </com.ljkj.qxn.wisdomsitepro.ui.project.view.CornerFrameLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

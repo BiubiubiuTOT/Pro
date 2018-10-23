@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:background="@color/color_white"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:gravity="center_vertical">
+
+    <RadioButton
+        android:id="@+id/rb_area"
+        style="@style/SelectRBStyle"
+        android:drawableRight="@drawable/selector_rb_select_down"
+        android:paddingLeft="10dp"
+        android:text="全州"
+        android:visibility="gone"/>
+
+    <cdsp.android.ui.widget.ClearEditTextView
+        android:id="@+id/edit_search"
+        style="@style/EditSearchStyle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:hint="请输入搜索关键词..."/>
+
+    <RadioButton
+        android:id="@+id/rb_select"
+        style="@style/SelectRBStyle"
+        android:drawableRight="@drawable/selector_rb_select_down"
+        android:paddingRight="10dp"
+        android:text="筛选"/>
+
+</LinearLayout>

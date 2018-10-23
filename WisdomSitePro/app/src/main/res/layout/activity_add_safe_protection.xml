@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="请填写防护说明"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_bg"
+        android:gravity="left|top"
+        android:hint="请输入5~50文字说明..."
+        android:maxLength="50"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/color_grey_333333"
+        android:textColorHint="@color/color_grey_666666"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_image"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="上传图片 0/9"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_white"
+        android:overScrollMode="never"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_main"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="15sp"/>
+
+</LinearLayout>

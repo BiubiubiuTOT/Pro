@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/bg_tower_crane"/>
+
+        <com.ljkj.qxn.wisdomsitepro.ui.application.equipment.TowerCraneOverlookView
+            android:id="@+id/overlook_view"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:padding="3dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/image1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/color_orange"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginBottom="8dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_bottom_line="false"
+                app:item_right_arrow="false"
+                app:item_title="操作信息"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:item_right_arrow="false"
+                app:item_title="司机姓名"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_card_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_right_arrow="false"
+                app:item_title="证书编号"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_right_arrow="false"
+                app:item_title="上机时间"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_operate_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_bottom_line="false"
+                app:item_right_arrow="false"
+                app:item_title="操作时长"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

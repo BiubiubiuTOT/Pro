@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@drawable/selector_common_background_white">
+
+    <TextView
+        android:id="@+id/tv_application_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="4dp"
+        android:drawableTop="@mipmap/ic_project_item02"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="14sp"
+        tools:text="安全检查"/>
+
+</FrameLayout>

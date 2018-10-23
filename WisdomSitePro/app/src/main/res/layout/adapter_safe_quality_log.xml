@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_common_background_white"
+                android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_avatar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_circle_name"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="18sp"
+        tools:text="名"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_avatar"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_record_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="14sp"
+            tools:text="记录人：姚明"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/listSeTvStyle"
+            android:drawablePadding="6dp"
+            android:textSize="13sp"
+            tools:text="日期：2018-02-22"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_construction_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_avatar"
+        android:layout_marginTop="10dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="13sp"
+        tools:text="施工部位：基桩底部"/>
+
+    <TextView
+        android:id="@+id/tv_construction_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_avatar"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_construction_site"
+        android:gravity="right"
+        android:lines="1"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="13sp"
+        tools:text="施工工序动态：正在施工中正在施工中正在施工中"/>
+
+</RelativeLayout>

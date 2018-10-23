@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_white"
+              android:orientation="vertical">
+
+    <View
+        style="@style/comDivider"
+        android:layout_height="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_reply_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="整改回复"
+            android:textColor="@color/color_main"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_reply_title"
+            android:gravity="center_vertical"
+            android:textColor="#F42E14"
+            android:textSize="14sp"
+            tools:text="监理审核不通过"/>
+
+        <TextView
+            android:id="@+id/tv_recall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_fold"
+            android:background="@drawable/shape_check_recall"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:text="撤回"
+            android:visibility="gone"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_fold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:drawablePadding="4dp"
+            android:drawableRight="@mipmap/ic_check_arrow_up"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingRight="18dp"
+            android:paddingTop="2dp"
+            android:text="折叠"
+            android:textColor="@color/color_main"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/comDivider"
+        android:background="@color/color_main"/>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/checkDetailTextViewStyle"
+            android:text="整改情况："/>
+
+        <TextView
+            android:id="@+id/tv_rectify_info"
+            style="@style/checkDetailTextViewStyle"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/color_grey_666666"
+            tools:text="整改情况整改情况整改情况整改情况整改情况整改情况整改情况整改情况整改情况"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_rectify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            style="@style/checkDetailTextViewStyle"
+            android:text="整改报告书扫描件"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_plan"
+            style="@style/checkDetailTextViewStyle"
+            tools:text="是否定制预案：否"/>
+
+        <TextView
+            android:id="@+id/tv_plan_title"
+            style="@style/checkDetailTextViewStyle"
+            android:text="定制预案附件"
+            android:textColor="@color/color_grey_666666"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_measure"
+            style="@style/checkDetailTextViewStyle"
+            android:layout_width="wrap_content"
+            tools:text="是否定制措施：否"/>
+
+        <TextView
+            android:id="@+id/tv_measure_title"
+            style="@style/checkDetailTextViewStyle"
+            android:text="定制措施附件"
+            android:textColor="@color/color_grey_666666"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_measure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            style="@style/checkDetailTextViewStyle"
+            android:layout_width="wrap_content"
+            tools:text="整改资金金额：2342万"/>
+
+        <TextView
+            android:id="@+id/tv_money_title"
+            style="@style/checkDetailTextViewStyle"
+            android:text="整改资金金额附件"
+            android:textColor="@color/color_grey_666666"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rl_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_height="10dp"/>
+
+        <com.ljkj.qxn.wisdomsitepro.ui.safe.check.RectifyReplyProgressView
+            android:id="@+id/reply_progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

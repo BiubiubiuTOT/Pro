@@ -1,0 +1,29 @@
+<resources>
+    <string name="construct_log_project_head">项目负责人：%1$s</string>
+    <string name="construct_log_project_recorder">记录人：%1$s</string>
+    <string name="construct_log_unit">施工单位：%1$s</string>
+    <string name="quality_accept_date">验收日期：%1$s</string>
+    <string name="quality_accept_understructure_type">基础类型：%1$s</string>
+    <string name="quality_accept_num_of_basement_floor">地下室层数：%1$s</string>
+    <string name="quality_accept_construct_type">结构类型：%1$s</string>
+    <string name="quality_accept_structure_area">建筑面积：%1$s</string>
+    <string name="quality_accept_construct_period">施工周期：%1$s周</string>
+    <string name="quality_accept_region">验收部位：%1$s</string>
+    <string name="quality_floor_count">地上：%1$s层，地下：%2$s层</string>
+    <string name="quality_accept_attachment">《%1$s》下载</string>
+    <string name="safe_guard_building_name">楼盘名称</string>
+    <string name="about_title">建筑智慧工地\n建筑项目智慧管理云平台</string>
+
+    <string-array name="arr_concrete_quality_info">
+        <item>商品混凝土\n进场验收</item>
+        <item>混凝土抗压\n强度检验</item>
+        <item>混凝土抗渗\n检验</item>
+    </string-array>
+
+    <string-array name="arr_safe_system">
+        <item>安全管理\n人员体系</item>
+        <item>安全生产\n管理制度</item>
+        <item>安全生产\n规章制度</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.contacts.DeptAppendActivity">
+
+    <include layout="@layout/layout_title_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputItemMaxLength="10"
+            app:inputItemTitle="班组/部门名称" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="请选择属性"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_dept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_bg"
+                    android:gravity="center_vertical"
+                    android:text=" 部门"
+                    android:textSize="13sp" />
+
+
+                <RadioButton
+                    android:id="@+id/rb_banzu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_bg"
+                    android:gravity="center_vertical"
+                    android:text=" 班组"
+                    android:textSize="13sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/comDivider"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+            android:id="@+id/item_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:item_bottom_line="false"
+            app:item_content="请选择"
+            app:item_right_arrow="true"
+            app:item_title="劳务公司" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/ButtonCommonRectangleStyle"
+        android:text="确定" />
+</LinearLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_project_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_small_project"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="24dp"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp"
+                    tools:text="观山湖区CBD项目"/>
+
+                <TextView
+                    android:id="@+id/tv_project_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_small_company"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="24dp"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp"
+                    tools:text="中铁贵州分公司"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="整改情况"/>
+
+
+            <EditText
+                android:id="@+id/et_situation"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_frame_grey_d2d2d2_2dp"
+                android:gravity="left"
+                android:hint="请输入5~500字描述..."
+                android:padding="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="整改照片"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:overScrollMode="never"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="监理单位意见"/>
+
+            <EditText
+                android:id="@+id/et_advice"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_frame_grey_d2d2d2_2dp"
+                android:gravity="left"
+                android:hint="请输入5~500字描述..."
+                android:padding="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="整改报告扫描件"/>
+
+
+            <TextView
+                android:id="@+id/tv_upload_report"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_main"
+                android:gravity="center"
+                android:text="上传整改报告扫描件"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/report_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:overScrollMode="never"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="是否制定预案"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ebf0f5"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="上传制定预案附件"/>
+
+                <TextView
+                    android:id="@+id/tv_upload_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/color_main"
+                    android:gravity="center"
+                    android:text="上传预案附件"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/plan_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_measure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="是否制定措施"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_measure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ebf0f5"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="上传制定措施附件"/>
+
+                <TextView
+                    android:id="@+id/tv_upload_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/color_main"
+                    android:gravity="center"
+                    android:text="上传措施附件"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/measure_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                app:inputItemTitle="资金数额(万元)"
+                app:inputItemType="decimal"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="上传整改资金附件"/>
+
+            <TextView
+                android:id="@+id/tv_upload_money"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_main"
+                android:gravity="center"
+                android:text="上传整改资金附件"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/money_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:overScrollMode="never"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

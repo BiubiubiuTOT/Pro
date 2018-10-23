@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_department_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginStart="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/arrow_2" />
+
+    <TextView
+        android:id="@+id/tv_department_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:drawablePadding="6dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="12sp"
+        tools:text="木工班（10）" />
+
+    <View style="@style/comDivider" />
+
+</LinearLayout>

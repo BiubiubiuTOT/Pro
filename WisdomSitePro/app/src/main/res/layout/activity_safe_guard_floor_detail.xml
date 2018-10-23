@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title_white"/>
+
+    <TextView
+        android:id="@+id/tv_floor_name"
+        style="@style/lightBlueTvItemStyle"
+        android:layout_below="@id/title_layout"
+        android:text="第一层"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_floor_detail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_floor_name"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <cdsp.android.banner.ConvenientBanner
+            android:id="@+id/convenientBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_banner_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/ic_banner_left"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_banner_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/ic_banner_right"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_banner_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_white"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_safe_guard_detail_tips"
+        style="@style/lightBlueTvItemStyle"
+        android:layout_below="@id/rl_floor_detail"
+        android:text="安全防护说明"/>
+
+    <TextView
+        android:id="@+id/tv_safe_guard_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_safe_guard_detail_tips"
+        android:padding="10dp"
+        android:text="施工场地四周道路畅通，地面应当硬化，排水、排污设施有效，无积水现象，温暖季节有绿化配置。"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/bt_add_floor_image"
+        style="@style/ButtonRectangleStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/bg_rectangle_orange_2dp"
+        android:text="新增图片"/>
+</RelativeLayout>

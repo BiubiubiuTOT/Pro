@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_common_background_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/ic_blue_arrow_right"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="15sp"
+            tools:text="标题"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableRight="@mipmap/ic_more"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="14sp"
+            tools:text="内容"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/comDivider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>

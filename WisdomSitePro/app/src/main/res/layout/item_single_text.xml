@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/selector_common_background_white"
+              android:orientation="vertical"
+              android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="全部"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"/>
+
+    <View
+        style="@style/comDivider"/>
+
+</LinearLayout>

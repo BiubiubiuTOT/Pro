@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="InputItemView">
+        <attr name="inputItemTitle" format="string"/>
+        <attr name="inputItemHint" format="string"/>
+        <attr name="inputItemRightArrow" format="boolean"/>
+        <attr name="inputItemMaxLength" format="integer"/>
+        <attr name="showBottomLine" format="boolean"/>
+        <attr name="inputItemType" format="enum">
+            <enum name="number" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="phone" value="2"/>
+            <enum name="decimal" value="3"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ItemView">
+        <attr name="item_title" format="string"/>
+        <attr name="item_title_color" format="color"/>
+        <attr name="item_title_size" format="dimension"/>
+        <attr name="item_content" format="string"/>
+        <attr name="item_content_color" format="color"/>
+        <attr name="item_content_size" format="dimension"/>
+        <attr name="item_bottom_line" format="boolean"/>
+        <attr name="item_right_arrow" format="boolean"/>
+        <attr name="item_icon" format="reference"/>
+        <attr name="item_left_circle_color" format="color"/>
+        <attr name="item_left_circle_radius" format="dimension"/>
+        <attr name="item_has_background" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundRectLinearLayout">
+        <attr name="all_radius" format="dimension"/>
+        <attr name="top_left_radius" format="dimension"/>
+        <attr name="top_right_radius" format="dimension"/>
+        <attr name="bottom_left_radius" format="dimension"/>
+        <attr name="bottom_right_radius" format="dimension"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="stroke_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelView">
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text_size" format="dimension"/>
+        <attr name="label_text_bold" format="boolean"/>
+        <attr name="label_background_color" format="color"/>
+
+        <!-- 设置文字上下padding,mFillTriangle为true时无效-->
+        <attr name="label_padding" format="dimension"/>
+        <!-- 否填充三角区域 -->
+        <attr name="label_fill_triangle" format="boolean"/>
+
+        <attr name="label_gravity" format="enum">
+            <enum name="LEFT_TOP" value="1"/>
+            <enum name="RIGHT_TOP" value="2"/>
+            <enum name="LEFT_BOTTOM" value="3"/>
+            <enum name="RIGHT_BOTTOM" value="4"/>
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalProgressBar">
+        <attr name="hpb_start_color" format="color"/>
+        <attr name="hpb_end_color" format="color"/>
+        <attr name="hpb_bg_color" format="color"/>
+        <attr name="hpb_animate" format="boolean"/>
+        <attr name="hpb_progress" format="integer"/>
+        <attr name="hpb_text_size" format="dimension"/>
+        <attr name="hpb_duration" format="integer"/>
+    </declare-styleable>
+
+</resources>

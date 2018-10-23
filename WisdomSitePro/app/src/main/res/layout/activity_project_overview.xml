@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <cdsp.android.banner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv_banner_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp"
+                    tools:text="1/3" />
+
+                <TextView
+                    android:id="@+id/tv_banner_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp"
+                    tools:text="2018-7-3" />
+
+            </RelativeLayout>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_project_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_right_arrow="false"
+                app:item_title="项目名称" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_project_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_right_arrow="false"
+                app:item_title="项目地点" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_project_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_right_arrow="false"
+                app:item_title="项目开工日期" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_project_time_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_bottom_line="false"
+                app:item_right_arrow="false"
+                app:item_title="合同工期" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_nine_brand_one_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:item_title="九牌一图" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                android:id="@+id/item_add_project_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                app:item_bottom_line="false"
+                app:item_title="工程形象进度" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

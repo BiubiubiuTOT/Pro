@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_name"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp"
+                    tools:text="姓"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/listFirstTvStyle"
+                    android:layout_marginLeft="10dp"
+                    tools:text="姓名"/>
+
+                <TextView
+                    android:id="@+id/tv_job"
+                    style="@style/listThirdTvStyle"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    tools:text="班组：钢筋工"/>
+
+                <ImageView
+                    android:id="@+id/iv_date_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@mipmap/ic_calender_date_left"/>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="13sp"
+                    tools:text="2018-5"/>
+
+                <ImageView
+                    android:id="@+id/iv_date_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@mipmap/ic_calender_date_right"/>
+
+            </LinearLayout>
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_calendar_bg"
+                app:calendar_height="43dp"
+                app:current_day_text_color="@color/color_white"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:month_view="com.ljkj.qxn.wisdomsitepro.Utils.widget.AttendMonthView"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_text_color="#333"
+                app:selected_text_color="@color/color_white"
+                app:selected_theme_color="@color/color_main"
+                app:week_background="@color/color_calendar_bg"
+                app:week_start_with="mon"
+                app:week_text_color="@color/color_grey_999999"/>
+
+            <include
+                layout="@layout/layout_calendar_matters"/>
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:text="无考勤信息"
+                android:textColor="@color/color_grey_333333"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

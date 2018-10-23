@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white" />
+
+    <ScrollView
+        android:id="@+id/scroll_View"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="基本信息"
+                android:textColor="@color/color_main"
+                android:textSize="13sp" />
+
+            <View style="@style/comDivider" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_record_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请输入（必填）"
+                app:inputItemMaxLength="20"
+                app:inputItemTitle="记录名称" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_inspector_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择（必填）"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="巡视时间" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="监理单位" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="巡视范围、部位、工序"
+                android:textColor="@color/color_main"
+                android:textSize="13sp" />
+
+            <View style="@style/comDivider" />
+
+            <EditText
+                android:id="@+id/et_inspector_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="left|top"
+                android:hint="请输入(150字内)"
+                android:maxLength="200"
+                android:minHeight="110dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="施工项目、人员到位、工艺合规性"
+                android:textColor="@color/color_main"
+                android:textSize="13sp" />
+
+            <View style="@style/comDivider" />
+
+            <EditText
+                android:id="@+id/et_construct_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="left|top"
+                android:hint="请输入(150字内)"
+                android:maxLength="200"
+                android:minHeight="110dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="主要巡视记录数据"
+                android:textColor="@color/color_main"
+                android:textSize="13sp" />
+
+            <View style="@style/comDivider" />
+
+            <EditText
+                android:id="@+id/et_record_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="left|top"
+                android:hint="请输入(150字内)"
+                android:maxLength="200"
+                android:minHeight="110dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="巡视图片"
+                android:textColor="@color/color_main"
+                android:textSize="13sp" />
+
+            <View style="@style/comDivider" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_main"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="15sp" />
+
+</LinearLayout>

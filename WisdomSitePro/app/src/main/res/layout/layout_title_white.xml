@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_bar_height_size"
+                android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableLeft="@mipmap/ic_title_back_black"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="返回"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingLeft="58dp"
+        android:paddingRight="58dp"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_common_background_white"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"/>
+
+    <View
+        style="@style/comDivider"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

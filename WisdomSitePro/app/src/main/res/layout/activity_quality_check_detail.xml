@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:background="#ebf0f5"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="检查记录表" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:overScrollMode="never" />
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:background="#ebf0f5"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="隐患情况" />
+
+            <TextView
+                android:id="@+id/tv_trouble_detail"
+                style="@style/listFirstTvStyle"
+                android:padding="10dp"
+                android:text="隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患隐患"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:background="#ebf0f5"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="现场照片" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:overScrollMode="never" />
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:background="#ebf0f5"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="整改附件" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_enclosure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_rectify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_orange"
+        android:gravity="center"
+        android:text="立即整改"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+</LinearLayout>

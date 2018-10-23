@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#282A34"
+              android:orientation="vertical"
+              android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        tools:text="日期：4日"/>
+
+    <TextView
+        android:id="@+id/tv_safe_inspect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1A98CF"
+        android:textSize="12sp"
+        tools:text="安全巡检：1次"/>
+
+    <TextView
+        android:id="@+id/tv_quality_inspect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F56106"
+        android:textSize="12sp"
+        tools:text="质量巡检：1次"/>
+
+    <TextView
+        android:id="@+id/tv_safe_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#65CC97"
+        android:textSize="12sp"
+        tools:text="安全检查：1次"/>
+
+    <TextView
+        android:id="@+id/tv_quality_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FECC99"
+        android:textSize="12sp"
+        tools:text="质量检查：1次"/>
+</LinearLayout>

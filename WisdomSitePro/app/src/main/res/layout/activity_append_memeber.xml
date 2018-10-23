@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white" />
+
+    <ScrollView
+        android:id="@+id/svContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <!--基本信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="基本信息(二代身份证上获取)"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_scan_id_card" />
+
+                <TextView
+                    android:id="@+id/tv_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:text="扫一扫"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="姓名" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemMaxLength="2"
+                app:inputItemTitle="年龄"
+                app:inputItemType="number" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="出生年月" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemTitle="民族" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="身份证号" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_link_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemMaxLength="11"
+                app:inputItemTitle="联系电话" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="性别" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemTitle="家庭住址" />
+
+            <!--岗位-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="岗位(必填)"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="项目职务" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="人员类型" />
+
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_user_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="人员类型" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_major"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请输入"
+                app:inputItemTitle="专业" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="职称" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_add_certificate"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/color_blue_1"
+                android:drawableLeft="@mipmap/add_certificate"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="新增证书"
+                android:textColor="@color/color_white" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_certificate_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="证书有效起始期" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.SquareImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_add_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="请上传一寸免冠照片"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="11sp" />
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/input_certificate_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="证书有效截止期" />
+
+            <!--其他-->
+            <RelativeLayout
+                android:id="@+id/rl_show_other_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="其他"
+                    android:textColor="@color/color_grey_666666"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_arrow_up" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_other_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_educational_attainments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemHint="请选择"
+                    app:inputItemRightArrow="true"
+                    app:inputItemTitle="文化程度" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_is_medical_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemHint="请选择"
+                    app:inputItemRightArrow="true"
+                    app:inputItemTitle="是否重大病史" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_work_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemTitle="开始工作日期" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_emergency_contact_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemTitle="紧急联系人姓名" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_emergency_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemTitle="紧急联系人电话" />
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                    android:id="@+id/input_attachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inputItemTitle="附件" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_append_member"
+        style="@style/ButtonCommonRectangleStyle"
+        android:text="确定" />
+</LinearLayout>

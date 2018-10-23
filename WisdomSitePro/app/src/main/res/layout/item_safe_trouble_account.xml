@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        style="@style/listFirstTvStyle"
+        android:text="工程部位-主体" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            style="@style/listThirdTvStyle"
+            android:layout_weight="1"
+            android:text="整改期限：" />
+
+        <TextView
+            style="@style/listThirdTvStyle"
+            android:text="检查日期：" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/listThirdTvStyle"
+        android:layout_marginTop="6dp"
+        android:text="销号日期：" />
+
+    <View
+        style="@style/comDivider"
+        android:layout_marginTop="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="隐患类型：" />
+
+        <TextView
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="是否定制预案：" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="是否定制措施:" />
+
+        <TextView
+            style="@style/listSeTvStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="整改资金投入情况：" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/listSeTvStyle"
+        android:layout_marginTop="6dp"
+        android:text="整改责任人:" />
+
+    <View
+        style="@style/comDivider"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        style="@style/listSeTvStyle"
+        android:layout_marginTop="6dp"
+        android:text="隐患情况:" />
+
+    <TextView
+        style="@style/listSeTvStyle"
+        android:layout_marginTop="6dp"
+        android:text="隐患情况隐患情况隐患情况隐患情况隐患情况隐患情况" />
+
+</LinearLayout>

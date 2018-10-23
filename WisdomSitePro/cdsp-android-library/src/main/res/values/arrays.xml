@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="concreteType">
+        <item>普通混凝土</item>
+        <item>泵送混凝土</item>
+        <item>抗渗混凝土</item>
+        <item>防水混凝土</item>
+        <item>粉煤灰混凝土</item>
+        <item>其他混凝土</item>
+    </string-array>
+
+    <string-array name="strengthGrade">
+        <item>C10</item>
+        <item>C15</item>
+        <item>C20</item>
+        <item>C25</item>
+        <item>C30</item>
+        <item>C35</item>
+        <item>C40</item>
+        <item>C45</item>
+        <item>C55</item>
+        <item>C60</item>
+        <item>C65</item>
+        <item>C70</item>
+        <item>C75</item>
+        <item>C80</item>
+        <item>C85</item>
+        <item>C90</item>
+        <item>C95</item>
+        <item>C100</item>
+    </string-array>
+
+    <string-array name="impermeabilityGrade">
+        <item>p4</item>
+        <item>p6</item>
+        <item>p8</item>
+        <item>p10</item>
+        <item>p12</item>
+        <item>>p12</item>
+    </string-array>
+
+    <string-array name="maintenanceMode">
+        <item>标准养护</item>
+        <item>同条件养护</item>
+        <item>拆模同条件养护</item>
+        <item>自然养护</item>
+        <item>标准养护20±2℃</item>
+        <item>同条件养护600℃</item>
+        <item>同条件养护600℃·d</item>
+        <item>塔吊基础同条件养护</item>
+        <item>同养转标养</item>
+        <item>同条件养护临界</item>
+    </string-array>
+
+    <string-array name="appearanceQuality">
+        <item>无</item>
+        <item>露筋</item>
+        <item>蜂窝</item>
+        <item>孔洞</item>
+        <item>夹渣</item>
+        <item>疏松</item>
+        <item>裂缝</item>
+        <item>连接部位缺陷</item>
+        <item>外形缺陷</item>
+        <item>外表缺陷</item>
+    </string-array>
+
+</resources>

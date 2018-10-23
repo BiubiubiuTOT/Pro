@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ljkj.qxn.wisdomsitepro.Utils.widget.SquareImageView
+    android:id="@+id/img"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="2dp"
+    android:scaleType="centerCrop"/>

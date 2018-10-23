@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@mipmap/bg_project_weather"
+              android:orientation="vertical"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <android.support.v4.widget.Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/iv_project"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_project_avatar"/>
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/space"
+            android:layout_toRightOf="@+id/iv_project"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="16sp"
+            tools:text="贵阳花果园2期"/>
+
+        <TextView
+            android:id="@+id/tv_barometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/space"
+            android:layout_toRightOf="@+id/iv_project"
+            android:background="@drawable/bg_project_barometer"
+            android:drawableLeft="@mipmap/ic_project_barometer"
+            android:drawablePadding="4dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:paddingTop="3dp"
+            android:text="晴雨表"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_work_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/space"
+            android:layout_marginTop="-4dp"
+            android:gravity="center"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="工期已用: 50%"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/comDivider"
+        android:background="@color/color_grey_cccccc"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="2018年6月20日"/>
+
+        <TextView
+            android:id="@+id/tv_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="天气：多云~雷阵雨"/>
+
+        <TextView
+            android:id="@+id/tv_work_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="施工天数"/>
+
+        <TextView
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="24dp"
+            android:textColor="@color/color_grey_333333"
+            android:textSize="16sp"
+            tools:text="星期三"/>
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_weather"
+            android:layout_below="@+id/tv_weather"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="风力：东南风 3级"/>
+
+        <TextView
+            android:id="@+id/tv_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_work_days"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_main"
+            android:textSize="20sp"
+            tools:text="102天"/>
+
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_wind"
+            android:layout_below="@+id/tv_wind"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/color_grey_666666"
+            android:textSize="14sp"
+            tools:text="温度：21~29°C"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_temperature"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_frame_greet_shape">
+
+            <TextView
+                android:id="@+id/tv_greet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/ic_project_smile"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="14sp"
+                tools:text="嗨，上午好！詹姆斯"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

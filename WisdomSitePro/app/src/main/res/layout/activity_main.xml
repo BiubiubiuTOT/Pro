@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View style="@style/comDivider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_message_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/selector_rb_main_message"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="消息"
+                android:textColor="@color/textcolor_main_bottom_tab"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/tv_message_dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="-22dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/rb_message"
+                android:background="@drawable/bg_message_circle_dot"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/rb_contacts"
+            style="@style/MainBottomTabStyle"
+            android:drawableTop="@drawable/selector_rb_main_contract"
+            android:text="联系人"/>
+
+        <RadioButton
+            android:id="@+id/rb_project"
+            style="@style/MainBottomTabStyle"
+            android:drawableTop="@drawable/selector_rb_main_project"
+            android:text="项目"/>
+
+        <RadioButton
+            android:id="@+id/rb_application"
+            style="@style/MainBottomTabStyle"
+            android:drawableTop="@drawable/selector_rb_main_app"
+            android:text="应用"/>
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/MainBottomTabStyle"
+            android:drawableTop="@drawable/selector_rb_main_personal"
+            android:text="我的"/>
+    </LinearLayout>
+
+</LinearLayout>

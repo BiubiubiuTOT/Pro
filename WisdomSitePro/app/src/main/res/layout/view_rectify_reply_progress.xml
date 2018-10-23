@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_supervisor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="监理单位意见"
+                android:textColor="@color/color_main"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_supervisor_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_check_verify_pass"
+                android:paddingBottom="2dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2dp"
+                android:textColor="#37C171"
+                android:textSize="14sp"
+                tools:text="审核通过"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/comDivider"
+            android:background="@color/color_main"/>
+
+        <TextView
+            style="@style/checkDetailTextViewStyle"
+            android:paddingTop="10dp"
+            android:text="意见："/>
+
+        <TextView
+            android:id="@+id/tv_supervisor_advice"
+            style="@style/checkDetailTextViewStyle"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/color_grey_666666"
+            tools:text="同意整改"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_height="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_supervise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="监督机构意见"
+                android:textColor="@color/color_main"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_supervise_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_check_verify_no_pass"
+                android:paddingBottom="2dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2dp"
+                android:textColor="#F42E14"
+                android:textSize="14sp"
+                tools:text="审核不通过"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/comDivider"
+            android:background="@color/color_main"/>
+
+        <TextView
+            style="@style/checkDetailTextViewStyle"
+            android:paddingTop="10dp"
+            android:text="意见："/>
+
+        <TextView
+            android:id="@+id/tv_supervise_advice"
+            style="@style/checkDetailTextViewStyle"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/color_grey_666666"
+            tools:text="同意整改"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_height="10dp"/>
+
+    </LinearLayout>
+
+    <com.ljkj.qxn.wisdomsitepro.ui.safe.check.RectifyProgressItemView
+        android:id="@+id/item_progress1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.ljkj.qxn.wisdomsitepro.ui.safe.check.RectifyProgressItemView
+        android:id="@+id/item_progress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.ljkj.qxn.wisdomsitepro.ui.safe.check.RectifyProgressItemView
+        android:id="@+id/item_progress3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.ljkj.qxn.wisdomsitepro.ui.safe.check.RectifyProgressItemView
+        android:id="@+id/item_progress4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

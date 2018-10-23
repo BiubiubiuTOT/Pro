@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/tv_load"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_common_background_white"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="下载"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+
+        android:layout_toLeftOf="@+id/tv_load"
+        android:drawableLeft="@mipmap/ic_enclosure"
+        android:drawablePadding="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="质量监督方案"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="14sp"/>
+
+
+    <View
+        style="@style/comDivider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"/>
+</RelativeLayout>

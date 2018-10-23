@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_common_background_white"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingTop="16dp"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="15sp"
+        tools:text="万科翡翠1号楼"/>
+
+    <TextView
+        android:id="@+id/tv_floors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="13sp"
+        tools:text="楼层数：33层"/>
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_safe_protection_orange"/>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:src="@mipmap/ic_safe_protection_delete"
+        android:visibility="gone"/>
+
+</RelativeLayout>

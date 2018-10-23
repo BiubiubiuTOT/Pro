@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请选择"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="日期"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="天气情况"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_wind_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请输入"
+                app:inputItemTitle="风力等级"/>
+
+            <LinearLayout
+                android:id="@+id/ll_emergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ebf0f5"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="请填写突发事件详情"/>
+
+                <EditText
+                    android:id="@+id/et_emergency"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_frame_grey_d2d2d2_2dp"
+                    android:gravity="left"
+                    android:hint="请输入5~500字描述..."
+                    android:padding="10dp"
+                    android:textColor="@color/color_grey_333333"
+                    android:textColorHint="@color/color_grey_666666"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemHint="请输入"
+                app:inputItemTitle="当前温度"/>
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_emergency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemMaxLength="20"
+                app:inputItemRightArrow="false"
+                app:inputItemTitle="突发事件"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="生产记录情况"/>
+
+            <EditText
+                android:id="@+id/et_production"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_frame_grey_d2d2d2_2dp"
+                android:gravity="left"
+                android:hint="请输入5~500字描述..."
+                android:padding="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="质量记录安全记录情况"/>
+
+            <EditText
+                android:id="@+id/et_security"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_frame_grey_d2d2d2_2dp"
+                android:gravity="left"
+                android:hint="请输入5~500字描述..."
+                android:padding="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ebf0f5"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="添加照片"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:overScrollMode="never"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"/>
+
+</LinearLayout>

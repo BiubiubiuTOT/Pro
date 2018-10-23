@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_build"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_building_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_white"
+            android:hint="请填写楼盘名称"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_grey_333333"
+            android:textColorHint="@color/color_grey_cccccc"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/comDivider1"
+            style="@style/comDivider"
+            android:layout_below="@id/et_building_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+            android:id="@+id/item_select_building_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comDivider1"
+            app:inputItemHint="请选择"
+            app:inputItemRightArrow="true"
+            app:inputItemTitle="请选择建立楼楼栋数量"/>
+
+        <Button
+            android:id="@+id/bt_submit_add_build"
+            style="@style/ButtonRectangleStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="提交"/>
+    </RelativeLayout>
+</LinearLayout>

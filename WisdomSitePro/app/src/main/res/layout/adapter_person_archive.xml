@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/selector_common_background_white"
+                android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"
+        tools:text="泥工班"/>
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_team"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="12sp"
+        tools:text="分包单位：贵州麒龙集团有限公司"/>
+
+    <TextView
+        android:id="@+id/tv_team_leader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_unit"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="12sp"
+        tools:text="班组长：姚明"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_team_leader"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="12sp"
+        tools:text="电话：13981888847"/>
+
+    <TextView
+        android:id="@+id/tv_members_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_person_archive_members_count"
+        android:gravity="center"
+        android:textColor="@color/color_main"
+        android:textSize="15sp"
+        tools:text="156"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_members_count"
+        android:layout_marginTop="16dp"
+        android:text="班组成员数"
+        android:textColor="@color/color_grey_666666"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

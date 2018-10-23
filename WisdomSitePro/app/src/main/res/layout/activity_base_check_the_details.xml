@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_white"
+                android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_white"/>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_orange"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="重新整改"
+        android:textColor="@color/color_white"
+        android:textSize="15sp"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_next"
+        android:layout_below="@id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_check_result"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="检查结果"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_check_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_project_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="项目名称"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查日期"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查工程部位"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="质量检查编号"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_check_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="检查人员"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_danger_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="隐患等级"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_finish_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="整改完成期限"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_rectify_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="整改单位"
+                    app:item_title_size="14sp"/>
+
+                <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                    android:id="@+id/item_rectify_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_content_size="14sp"
+                    app:item_right_arrow="false"
+                    app:item_title="整改类型"
+                    app:item_title_size="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_major_danger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_supervise_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="申请解除督办日期"
+                        app:item_title_size="14sp"/>
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="联系人"
+                        app:item_title_size="14sp"/>
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="联系电话"
+                        app:item_title_size="14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="隐患情况"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_danger_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="隐患情况隐患情况隐患情况"
+                    android:textColor="@color/color_grey_333333"
+                    android:textSize="14sp"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_grey_e5e5e5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="附件"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_attachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+
+            <!--00000000000000000000000000000000000000000000000000-->
+
+            <TextView
+                android:id="@+id/tv_rectify_reply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:drawableRight="@mipmap/ic_collapse"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="整改回复"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_rectify_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_project_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:drawableLeft="@mipmap/ic_small_company"
+                            android:drawablePadding="6dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/color_grey_666666"
+                            android:textSize="13sp"
+                            tools:text="观山湖麒龙CBD项目"/>
+
+                        <TextView
+                            android:id="@+id/tv_project_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:drawableLeft="@mipmap/ic_small_project"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:lines="1"
+                            android:textColor="@color/color_grey_666666"
+                            android:textSize="13sp"
+                            tools:text="中铁贵州分公司"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_grey_e5e5e5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="整改情况"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_situation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/color_grey_666666"
+                        android:textSize="13sp"
+                        tools:text="施工现场四周道路畅通，地面应当硬化，排水排污设施有效，无积水现象，无积水现象，温暖季节有绿化设施。"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_rectify_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_grey_e5e5e5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="监理单位意见"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_unit_advice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="@color/color_grey_666666"
+                        android:textSize="13sp"
+                        tools:text="施工现场四周道路畅通，地面应当硬化，排水排污设施有效，无积水现象，无积水现象，温暖季节有绿化设施。"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_grey_e5e5e5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="整改报告扫描件"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_report_attachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"/>
+
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_whether_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="是否制定预案"
+                        app:item_title_size="14sp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_plan_attachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"/>
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_whether_measure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="是否制定措施"
+                        app:item_title_size="14sp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_measure_attachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"/>
+
+                    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+                        android:id="@+id/item_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_content_size="14sp"
+                        app:item_right_arrow="false"
+                        app:item_title="资金数额（万元）"
+                        app:item_title_size="14sp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_grey_e5e5e5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="整改资金附件"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_money_attachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_status1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toLeftOf="@+id/iv_status2"
+                    android:src="@mipmap/ic_rectify_unqualified"/>
+
+                <ImageView
+                    android:id="@+id/iv_status2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="50dp"
+                    android:src="@mipmap/ic_supervision_of_listing"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

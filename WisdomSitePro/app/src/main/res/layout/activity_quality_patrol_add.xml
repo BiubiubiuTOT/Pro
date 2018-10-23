@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:fitsSystemWindows="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemRightArrow="true"
+                app:inputItemTitle="检查日期"/>
+
+
+
+            <com.ljkj.qxn.wisdomsitepro.Utils.widget.InputItemView
+                android:id="@+id/item_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputItemTitle="整改班组"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_choose_reason"
+                style="@style/PersonalItemStyle">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_weight="1"
+                    android:text="按事故发生原因分类"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_reason"
+                    style="@style/listFirstTvStyle"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/ic_more"
+                    android:hint="请选择"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_choose_lose"
+                style="@style/PersonalItemStyle">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_weight="1"
+                    android:text="按人员伤亡及经济损失分类"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_lose"
+                    style="@style/listFirstTvStyle"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/ic_more"
+                    android:hint="请选择"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="巡检发生的问题"
+                android:textColor="@color/color_white"/>
+
+            <EditText
+                android:id="@+id/et_ques"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_frame_grey_rectify"
+                android:gravity="left"
+                android:hint="请输入5~500字描述..."
+                android:maxLength="500"
+                android:padding="10dp"
+                android:textColor="@color/color_grey_333333"
+                android:textColorHint="@color/color_grey_666666"
+                android:textSize="13sp"/>
+
+
+            <TextView
+                style="@style/listFirstTvStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_main"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="添加图片"
+                android:textColor="@color/color_white"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:overScrollMode="never"/>
+
+            <LinearLayout
+                style="@style/PersonalItemStyle"
+                android:paddingLeft="0dp">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_marginLeft="10dp"
+                    android:text="发文人"
+                    android:textSize="13sp"/>
+
+                <EditText
+                    android:id="@+id/et_fwr"
+                    style="@style/BaseEditTextStyle"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/comDivider"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout style="@style/PersonalItemStyle">
+
+                <TextView
+                    style="@style/listFirstTvStyle"
+                    android:layout_weight="1"
+                    android:text="班组负责人"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_group_leader"
+                    style="@style/listFirstTvStyle"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/ic_more"
+                    android:hint="请选择"
+                    android:textColorHint="@color/color_grey_999999"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"/>
+
+</LinearLayout>

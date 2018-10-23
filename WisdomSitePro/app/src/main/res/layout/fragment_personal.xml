@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@mipmap/ic_head_default"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_personal_avatar_edit"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"
+                tools:text="詹姆斯"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_grey_666666"
+                android:textSize="14sp"
+                tools:text="123123123"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_title="切换项目"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_title="修改密码"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_title="检查更新"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_bottom_line="false"
+        app:item_title="关于我们"/>
+
+    <FrameLayout
+        android:id="@+id/ll_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rectangle_login_out">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_personal_login_out"
+            android:drawablePadding="10dp"
+            android:text="注销登录"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+

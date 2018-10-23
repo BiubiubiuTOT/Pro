@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_main_supervisor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_content_size="14sp"
+        app:item_right_arrow="false"
+        app:item_title="姓名"
+        app:item_title_size="14sp" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_main_supervisor_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_content_size="14sp"
+        app:item_right_arrow="false"
+        app:item_title="资质证书号"
+        app:item_title_size="14sp" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_main_supervisor_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_content_size="14sp"
+        app:item_right_arrow="false"
+        app:item_title="联系电话"
+        app:item_title_size="14sp" />
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_main_supervisor_idcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_content_size="14sp"
+        app:item_right_arrow="false"
+        app:item_title="身份证号码"
+        app:item_title_size="14sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_structure_name"
+            style="@style/listFirstTvStyle"
+            android:text="分部结构名称"/>
+
+        <TextView
+            android:id="@+id/tv_accept_date"
+            style="@style/listThirdTvStyle"
+            android:layout_marginTop="6dp"
+            android:text="@string/quality_accept_date"/>
+
+        <View
+            style="@style/comDivider"
+            android:layout_marginTop="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_understructure_type"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:text="@string/quality_accept_understructure_type"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_num_of_basement_floor"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/quality_accept_num_of_basement_floor"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_construct_type"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:text="@string/quality_accept_construct_type"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_structure_area"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/quality_accept_structure_area"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_construct_period"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:text="@string/quality_accept_construct_period"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_accept_region"
+                style="@style/listSeTvStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/quality_accept_region"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_simple_recycleview_list"/>
+</LinearLayout>

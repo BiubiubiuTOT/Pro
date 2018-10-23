@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ljkj.qxn.wisdomsitepro">
+
+    <!-- 网络请求权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 文件读取和拍照权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <permission
+        android:name="com.ljkj.qxn.wisdomsitepro.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ljkj.qxn.wisdomsitepro.permission.MIPUSH_RECEIVE" />
+
+    <application
+        android:name=".WApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/wisdom_app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:allowBackup,android:supportsRtl">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/FullScreenStyle" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ljkj.qxn.wisdomsitepro"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- H5UI -->
+        <activity
+            android:name=".ui.web.BaseWebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 通用UI -->
+        <activity
+            android:name=".ui.common.BaseCheckDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.BaseInspectionDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.BaseCheckRectificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.BaseQualityInforOfMixedSoilActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 项目UI -->
+        <activity
+            android:name=".ui.project.ManagerPeopleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.ConstructionSiteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.ProjectEffectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.AddProjectImageProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.ProjectProgressActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 应用UI -->
+        <activity
+            android:name=".ui.application.LaborPersonFileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.AttendManageListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.ConstructLogListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.PayrollListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.ConstructLogAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.ConstructLogDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 个人UI -->
+        <activity
+            android:name=".ui.personal.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.MessgeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.ProjectListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenStyle" />
+
+        <!-- 质量UI -->
+        <activity
+            android:name=".ui.quality.QualityInspectionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.ConcreteQualityInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityAcceptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityManageSystemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualitySuperviRegiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualitySuperviseSignActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 质量检查 -->
+        <activity
+            android:name=".ui.quality.QuaGenerHiddenDangerOfImmeRectiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QuaCheckDetailsOfRectifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QuaCheckDetailsOfQualifiedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QuaCheckDetailsOfToBeAuditedActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 混泥土 -->
+        <activity
+            android:name=".ui.quality.ImpermeabilityTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.CompressionTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.SiteAcceptanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.SiteAcceptanceAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.CompressionAndImpermeabilityAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 安全UI -->
+        <activity
+            android:name=".ui.safe.SafeCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeEducationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeTroubleAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeSystemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafetySupervisionDeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafetySupervisionWorkPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardAddBuildActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardBuildingDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardAddFloorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardFloorDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGuardEditFloorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeEducationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeEducationAddActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 安全检查 -->
+        <activity
+            android:name=".ui.safe.SafeCheckDetailsOfQualifiedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeCheckDetailsOfRectifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeCheckDetailsOfToBeAuditedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeGenerHiddenDangerOfImmeRectiActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 安全巡检 -->
+        <activity
+            android:name=".ui.quality.QuaImmediateRectificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeImmediateRectificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.BaseInspectionDetailsActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsOfQualified2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsOfImmeApprovalActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsOfQualifiedActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionRectificationActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsOfImmeRectiActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.InspectionDetailsOfTobeAuditedActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.VideoActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.application.VideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.AttendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.VideoMonitorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.FullScreenVideoActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenStyle" />
+        <activity
+            android:name=".ui.common.RemotePDFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.SafeManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.QualityManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.LabourManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.AddNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.NoticeContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.QRCodeScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.SafeQualityLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.AddSafeQualityLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.SafeQualityLogDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeHiddenAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeHiddenAccountDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.equipment.SpecialEquipmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.MobileLawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.IMConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.ljkj.qxn.wisdomsitepro"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.contacts.NineBrandOneChartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ProjectOverviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ProjectOrganizationManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ProjectQRActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ContractDepartmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.MemberAppendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.CreateProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ContractMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.DepartmentStructureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.MemberInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.PersonArchiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contacts.ContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeTechnologyDiscloseAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeTechnologyDiscloseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.AttendManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.equipment.EquipmentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.equipment.TowerCraneDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.equipment.ElevatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityHiddenAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.equipment.AMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.DebugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SideStationRecordManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SupervisorManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.InspectorRecordManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SupervisorRecordManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SupervisorStandardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.AddSideStationRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.AddInspectorRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.InspectorRecordDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.AddSupervisorRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SupervisorRecordDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.supervisor.SupervisorStandardDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.protection.SafeProtectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.protection.AddSafeProtectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.protection.FloorDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.protection.FloorsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.check.CheckListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.check.CheckDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.check.CheckImmediateRectifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.check.SupervisorCheckListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.check.SupervisorVerifyActivity"
+            android:screenOrientation="portrait" />
+        />
+        <receiver
+            android:name=".Utils.DownloadManagerReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 小米推送 startPicker -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <!-- 高德定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.MiPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.RongIMNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 小米推送 end -->
+
+
+        <!-- 配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="${BUGLY_APP_CHANNEL}" />
+
+        <!-- 高德地图key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="db1894a2b3150c1365e36e67ff5b0b86" />
+
+        <activity
+            android:name=".ui.safe.SafeInspectionListV2Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.safe.SafeInspectionAddV2Activity" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailsOfQualifiedV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailsOfImmeApprovalV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailsOfQualifiedV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailsOfTobeAuditedV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionDetailsOfImmeRectiV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeInspectionRectificationV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionListV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailsOfImmeApprovalV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailsOfImmeRectiV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailsOfQualifiedV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailsOfQualifiedV2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionDetailsOfTobeAuditedV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionAddV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.quality.QualityInspectionRectificationV2Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.contacts.DeptAppendActivity" />
+        <activity
+            android:name=".ui.safe.protection.EditSafeProtectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SafeTechnologyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.safe.SelectTeamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.application.LaborPersonDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.ProjectOverviewBrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.BrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presenter.project.SafeProductBrandActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.project.PeasantBrandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.project.FivePartyDutyMainBodyActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

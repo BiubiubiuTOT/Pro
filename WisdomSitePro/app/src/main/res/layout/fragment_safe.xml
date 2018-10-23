@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_title_blue"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_safe_fragment_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_safe_log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_safe_check"/>
+
+        <ImageView
+            android:id="@+id/item_safe_inspection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_safe_inspection"/>
+
+    </LinearLayout>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_safe_statistics"
+        app:item_title="安全统计"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_safe_education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_safe_edu"
+        app:item_title="安全教育"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_safe_guard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_safe_protect"
+        app:item_title="安全防护"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_safe_hidden_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_safe_hidden_account"
+        app:item_title="安全隐患台账"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_safe_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_icon="@mipmap/ic_safe_system"
+        app:item_title="安全体系"/>
+
+    <com.ljkj.qxn.wisdomsitepro.Utils.widget.ItemView
+        android:id="@+id/item_safe_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_bottom_line="false"
+        app:item_icon="@mipmap/ic_safe_log"
+        app:item_title="安全检查"/>
+
+</LinearLayout>
+
+

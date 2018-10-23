@@ -1,0 +1,181 @@
+<RelativeLayout android:id="@+id/rl_matters"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="1dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="34dp"
+        android:background="#a0a0a0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_go_to_work_grey"/>
+
+            <TextView
+                android:id="@+id/tv_date_to_work"
+                style="@style/listFirstTvStyle"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="09:00"/>
+
+            <TextView
+                style="@style/listThirdTvStyle"
+                android:layout_marginLeft="10dp"
+                android:text="(上班时间 08：00)"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/listFirstTvStyle"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="6dp"
+            android:text="上班打卡时间"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/listThirdTvStyle"
+                android:text="打卡地点："
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_address_to_work"
+                style="@style/listThirdTvStyle"
+                android:drawableLeft="@mipmap/ic_location_clock_in"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="12sp"
+                tools:text="打卡地点"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/listThirdTvStyle"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="6dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="打卡照片："
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/iv_go_work_head"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="40dp"
+            android:src="@mipmap/ic_head_default"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/v_line"
+                android:src="@mipmap/ic_go_off_work_grey"/>
+
+            <TextView
+                android:id="@+id/tv_date_off_work"
+                style="@style/listFirstTvStyle"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="19:00"/>
+
+            <TextView
+                style="@style/listThirdTvStyle"
+                android:layout_marginLeft="10dp"
+                android:text="(下班时间 18：30)"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/listFirstTvStyle"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="6dp"
+            android:text="下班打卡时间"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/listThirdTvStyle"
+                android:text="打卡地点："
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_address_off_work"
+                style="@style/listThirdTvStyle"
+                android:drawableLeft="@mipmap/ic_location_clock_in"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="12sp"
+                tools:text="打卡地点"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/listThirdTvStyle"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="6dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="打卡照片："
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/iv_off_work_head"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="40dp"
+            android:src="@mipmap/ic_head_default"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

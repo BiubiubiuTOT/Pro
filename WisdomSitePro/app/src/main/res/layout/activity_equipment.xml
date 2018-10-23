@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_title_white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp">
+
+            <android.support.v4.widget.Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_toLeftOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_tower_crane"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="塔吊"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_elevator"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="升降机"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_one"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_safety_hat"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="安全帽"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_four"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_two"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_unloading_platform"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="卸料平台"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_five"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_three"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_mist_spray"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="雾炮喷淋"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_six"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_three"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_high_formwork"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:text="高支模"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_seven"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_five"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/space"
+                android:background="@drawable/selector_common_background_white"
+                android:drawableLeft="@mipmap/ic_equipment_deep_excavation"
+                android:drawablePadding="-16dp"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:text="深基坑"
+                android:textColor="@color/color_grey_333333"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

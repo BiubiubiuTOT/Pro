@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/selector_common_background_white"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_person"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_common_background_white"
+        android:drawableLeft="@mipmap/ic_circle_unselected"
+        android:drawablePadding="8dp"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/color_grey_333333"
+        android:textSize="14sp"
+        tools:text="钢筋班（10人）"/>
+
+    <View
+        style="@style/comDivider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="32dp"/>
+
+</RelativeLayout>
+
+
