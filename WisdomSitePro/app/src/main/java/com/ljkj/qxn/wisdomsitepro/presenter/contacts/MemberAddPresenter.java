@@ -1,11 +1,10 @@
+
 package com.ljkj.qxn.wisdomsitepro.presenter.contacts;
 
 import com.google.gson.reflect.TypeToken;
 import com.ljkj.qxn.wisdomsitepro.contract.contacts.MemberAddContract;
-import com.ljkj.qxn.wisdomsitepro.data.entity.MessageInfo;
 import com.ljkj.qxn.wisdomsitepro.data.entity.PageInfo;
 import com.ljkj.qxn.wisdomsitepro.data.entity.contract.DutyListInfo;
-import com.ljkj.qxn.wisdomsitepro.data.entity.contract.MemberAddInfo;
 import com.ljkj.qxn.wisdomsitepro.data.entity.contract.QueryMemberInfo;
 import com.ljkj.qxn.wisdomsitepro.model.ContactsModel;
 
@@ -122,11 +121,13 @@ public class MemberAddPresenter extends MemberAddContract.Presenter {
         }) {
             @Override
             public void onSuccess(ResponseData<PageInfo<QueryMemberInfo>> data) {
-                if (data.isSuccess()) {
-                    view.showSearchMembers(data.getResult());
-                } else {
-                    String errmsg = data.getErrmsg();
-                    view.showError(errmsg);
+                if (isAttach) {
+                    if (data.isSuccess()) {
+                        view.showSearchMembers(data.getResult());
+                    } else {
+                        String errmsg = data.getErrmsg();
+                        view.showError(errmsg);
+                    }
                 }
             }
 
@@ -137,3 +138,4 @@ public class MemberAddPresenter extends MemberAddContract.Presenter {
         });
     }
 }
+
